@@ -76,7 +76,7 @@ class PaidGamesByYear:
         self.games = games
         self.release_year = release_year
 
-#Filtrando os jogos pagos do ano especificado
+#filtrando os jogos pagos do ano especificado
   
     def average_price(self):
         filtered_games = [
@@ -92,3 +92,30 @@ class PaidGamesByYear:
     def __str__(self):
         return f"PERGUNTA 3) Qual a média dos preços dos jogos pagos filtrados por ano de lançamento? RESPOSTA >>> Preço médio dos jogos pagos lançados em {self.release_year if self.release_year else 'qualquer ano'}: R${self.average_price():.2f}"
 
+#exemplo de uso:
+
+games = [
+    Game("Game A", 0.0, 2020),
+    Game("Game B", 19.99, 2021),
+    Game("Game C", 0.0, 2020),
+    Game("Game D", 29.99, 2021)
+]
+
+#exibindo resultados na tela
+
+print ("=====================================================================")
+print(
+  
+)
+free_paid_analysis = FreePaidAnalysis(games)
+print(free_paid_analysis)
+print(
+  
+)
+year_analysis = YearAnalysis(games)
+print(year_analysis)
+print(
+  
+)
+additional_analysis = PaidGamesByYear(games)
+print(additional_analysis)
