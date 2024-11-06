@@ -45,3 +45,18 @@ class FreePaidAnalysis:
   def __str__(self):
       free_percentage, paid_percentage = self.get_free_paid_percentage()
       return f"Jogos gratuitos: {free_percentage:.2f}% | Jogos pagos: {paid_percentage:.2f}%"
+
+#criando classe YearAnalysis e método calculate_year_counts para calcular a quantidade de jogos lançados por ano.
+
+class YearAnalysis:
+  def __init__(self, games):
+      self.games = games
+      self.year_counts = {}
+      self.calculate_year_counts()
+  
+  def calculate_year_counts(self):
+      for game in self.games:
+          if game.release_year in self.year_counts:
+              self.year_counts[game.release_year] += 1
+          else:
+              self.year_counts[game.release_year] = 1
