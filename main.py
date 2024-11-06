@@ -46,7 +46,7 @@ class FreePaidAnalysis:
       free_percentage, paid_percentage = self.get_free_paid_percentage()
       return f"Jogos gratuitos: {free_percentage:.2f}% | Jogos pagos: {paid_percentage:.2f}%"
 
-#criando classe YearAnalysis e método calculate_year_counts para calcular a quantidade de jogos lançados por ano.
+#criando classe YearAnalysis e método calculate_year_counts para calcular a quantidade de Games lançados por ano.
 
 class YearAnalysis:
   def __init__(self, games):
@@ -60,3 +60,15 @@ class YearAnalysis:
               self.year_counts[game.release_year] += 1
           else:
               self.year_counts[game.release_year] = 1
+
+
+#criando método que identifica o ano com mais Games lançados e retorna string com os anos respectivos
+
+def get_year_with_most_new_games(self):
+  max_games = max(self.year_counts.values(), default=0)
+  most_popular_years = [year for year, count in self.year_counts.items() if count == max_games]
+  return most_popular_years
+
+def __str__(self):
+  years = self.get_year_with_most_new_games()
+  return f"Anos(s) com maior número de novos jogos: {', '.join(map(str, years))}"
