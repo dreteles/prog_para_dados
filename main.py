@@ -1,5 +1,5 @@
 
-#lendo e tratando arquivos csv
+#lendo e tratando dados csv
 
 f = open ("games_steam.csv")
 for line in f:
